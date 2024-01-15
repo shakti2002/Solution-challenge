@@ -59,5 +59,5 @@ The primary objective is to deliver empathetic and tailored assistance to users 
 # Block Diagram
   ![diagram-export-11-5-2023-10_19_08-AM](https://github.com/shakti2002/TechGeeks/assets/109802187/886edfef-af17-4bbb-90c0-c8d6e5bfe04f)
 
-# Presentation
-https://drive.google.com/file/d/1rdKBy9d5_LXhMd6Znhctk3HyeJ_BHLEw/view?usp=sharing
+# Presentation[
+https://www.canva.com/design/DAF58LMrtAE/WlyOu-Uvm_GYoFrOJz1jYg/edit)https://www.canva.com/design/DAF58LMrtAE/WlyOu-Uvm_GYoFrOJz1jYg/edit

@@ -1,0 +1,12 @@
+.card-body{
+    display: flex;
+    border: 1px solid black;
+    width: 20rem;
+    margin: 1rem;
+    border-radius: 12px;
+    padding:2px;
+    height: 25rem;
+}
+.card-title{
+    border-bottom: 1px solid black;
+}

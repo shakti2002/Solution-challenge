@@ -3,13 +3,14 @@ import { AiOutlineUser, AiOutlineVideoCameraAdd } from 'react-icons/ai';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { BiMessageAdd } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
-
+import MyChart from './Chart/MyChart';
 
 const Home = () => {
     const navigate = useNavigate();
     return (
         <>
-           
+
+
             <div className="flex h-[100vh] mt-[4rem]">
 
                 <div className='w-[60%] px-[4rem] py-[6rem] bg-[#fafcfc]'>
@@ -66,6 +67,11 @@ const Home = () => {
 
                 </div>
 
+            </div>
+            <div className='flex flex-wrap mt-[4rem] w-[100%]'>
+                <div className='p-[1rem] m-auto'><MyChart /></div>
+                <div className='p-[1rem] m-auto'><MyChart /></div>
+                <div className='p-[1rem] m-auto'><MyChart /></div>
             </div>
         </>
     )

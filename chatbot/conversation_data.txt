@@ -1,0 +1,8 @@
+User: tell me my name
+Bot: Your name is shrinath asati
+User: Yes, I'm looking for long-term growth and I'm willing to take on moderate risk.
+Bot: That's a good approach. It's important to diversify your investments and consider factors like location, property type, and market trends.
+User: What are some key factors to consider when evaluating a potential investment property?
+Bot: Location is crucial. Look for properties in areas with strong demand and potential for appreciation. Also, consider the property's condition, rental potential, and potential for future development.
+User: How can I negotiate a good deal when buying a property?
+Bot: Research comparable properties in the area to understand market prices. Be prepared to negotiate on price, closing costs, and contingencies. And don't forget to get a professional inspection to uncover any potential issues.

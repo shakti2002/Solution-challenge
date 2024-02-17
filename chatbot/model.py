@@ -2,7 +2,7 @@ import openai
 import pickle
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "your api key"
 
 # Load your conversation data
 with open('conversation_data.txt', 'r') as file:

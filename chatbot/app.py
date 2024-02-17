@@ -1,7 +1,7 @@
 import openai
 
 # Set up your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "Your api key"
 
 # User profile
 user_profile = {

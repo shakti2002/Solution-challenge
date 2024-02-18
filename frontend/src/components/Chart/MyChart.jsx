@@ -16,7 +16,7 @@ const MyChart = () => {
     };
 
     return (
-        <div className='m-[1rem]'>
+        <div className='m-[1rem] bg-[#69696929] p-[2rem] rounded'>
             <h1>My Chart</h1>
             <Chart options={options} series={options.series} type="line" width={500} />
         </div>

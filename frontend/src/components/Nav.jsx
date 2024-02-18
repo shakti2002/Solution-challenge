@@ -15,7 +15,7 @@ const Chat = () => {
 
             <ul className='pl-8 flex justify-between w-[35%] my-auto'>
                 {/* <li className='flex cursor-pointer'>Services <RiArrowDropDownLine className='m-auto text-3xl ' /></li> */}
-                <Link to='/' className='flex cursor-pointer'>Opportunity</Link>
+                <Link to='/shopping' className='flex cursor-pointer'>Shopping</Link>
                 <Link to='/' className='flex cursor-pointer'>Application</Link>
                 <li className='flex cursor-pointer'>About</li>
                 <li className='flex cursor-pointer'>Contact</li>

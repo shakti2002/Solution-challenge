@@ -4,9 +4,17 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { BiMessageAdd } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 import MyChart from './Chart/MyChart';
+import VideoCarousel from './Crousel/Crousel';
 
 const Home = () => {
     const navigate = useNavigate();
+
+    const videos = [
+        { id: 1, src: 'v.mp4' },
+        { id: 2, src: 'video2.mp4' },
+        { id: 3, src: 'video3.mp4' },
+        // Add more video objects as needed
+    ];
     return (
         <>
 
@@ -68,10 +76,21 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='flex flex-wrap mt-[4rem] w-[100%]'>
-                <div className='p-[1rem] m-auto'><MyChart /></div>
-                <div className='p-[1rem] m-auto'><MyChart /></div>
-                <div className='p-[1rem] m-auto'><MyChart /></div>
+            <div className="flex flex-wrap mt-16 w-full">
+                <div className="p-4 m-[1rem]  bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+            </div>
+
+
+            <div className='h-[40vh] my-[4rem]'>
+                <VideoCarousel videos={videos} />
             </div>
         </>
     )

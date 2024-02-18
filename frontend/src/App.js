@@ -8,7 +8,7 @@ import { Signuppage } from "./components/Signup";
 import KnowAboutYou from "./components/KnowAboutYou";
 import UserDetailsForm from "./components/GetDetails/Mannualy";
 import MapComponent from "./components/Map/Map";
-
+import Shopping from "./components/Shopping/Shopping";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="/shopping" element={<Shopping />} />
           <Route path="/knowaboutyou" element={<KnowAboutYou />} />
           <Route path="/chatbot" element={<Chatbot />} />
 

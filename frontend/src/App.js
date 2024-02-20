@@ -9,6 +9,8 @@ import KnowAboutYou from "./components/KnowAboutYou";
 import UserDetailsForm from "./components/GetDetails/Mannualy";
 import MapComponent from "./components/Map/Map";
 import Shopping from "./components/Shopping/Shopping";
+import DoctorsList from "./components/Doctors/DoctorList";
+import DoctorSchedulePage from "./components/Doctors/DoctorSchedulePage";
 
 function App() {
   return (
@@ -17,9 +19,13 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/shopping" element={<Shopping />} />
           <Route path="/knowaboutyou" element={<KnowAboutYou />} />
           <Route path="/chatbot" element={<Chatbot />} />
+
+          <Route path='/doctors_list' element={<DoctorsList />} />
+          <Route path='/schedule/:id' element={<DoctorSchedulePage />} />
 
           <Route path='/map' element={<MapComponent />} />
           <Route path="/resumeform" element={<UserDetailsForm />} />

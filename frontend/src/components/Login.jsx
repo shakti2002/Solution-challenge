@@ -1,5 +1,6 @@
 import react, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 import './Login.css';
 
@@ -8,20 +9,23 @@ const Login = () => {
     const [user, Setuser] = useState({ email: "dd4321@gmail.com", password: "dd4321" });
     let navigate = useNavigate();
     const LoginUser = async () => {
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/login', {
+                user: user,
+            });
 
-        const response = await axios.post('http://127.0.0.1:5000/login', {
-            user: user,
-        });
+            if (response.status == 200) {
+                //Save And Redirect To Home
+                localStorage.setItem("email", user['email']);
+                navigate('/');
+            } else {
+                toast.error("PLease fill correct details again !");
+            }
 
-        if (response.status == 200) {
-            //Save And Redirect To Home
-            localStorage.setItem("email", user['email']);
-            navigate('/');
-        } else {
-
-            alert("Some error occurred .PLease try again !");
-
+        } catch (error) {
+            toast.error('Please tyr to check your network. Backend is not available');
         }
+
     }
 
     const handleChange = (e) => {
@@ -33,22 +37,24 @@ const Login = () => {
         LoginUser();
     }
     return (
-        <div className='outer_box'>
-            <form className='login_container' onSubmit={handleSubmit}>
-                <h1>Login</h1>
+        <>
+            <div className='outer_box'>
+                <form className='login_container' onSubmit={handleSubmit}>
+                    <h1>Login</h1>
 
-                <div className='login_row'>
-                    <h4 className='login_email'>Email</h4>
-                    <input type='email' name='email' onChange={handleChange} required />
-                </div>
-                <div className='login_row'>
-                    <h4>Password</h4>
-                    <input type='password' name='password' onChange={handleChange} required />
-                </div>
-                <button disabled={user.password.length < 1} >Submit</button>
-            </form>
-        </div>
-
+                    <div className='login_row'>
+                        <h4 className='login_email'>Email</h4>
+                        <input type='email' name='email' onChange={handleChange} required />
+                    </div>
+                    <div className='login_row'>
+                        <h4>Password</h4>
+                        <input type='password' name='password' onChange={handleChange} required />
+                    </div>
+                    <button disabled={user.password.length < 1} >Submit</button>
+                </form>
+                <ToastContainer />
+            </div>
+        </>
 
     );
 }

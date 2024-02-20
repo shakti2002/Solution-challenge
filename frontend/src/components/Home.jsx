@@ -48,7 +48,7 @@ const Home = () => {
 
                             </div>
                             <div className='flex'>
-                                <div className='flex m-2 shadow-lg w-[14rem] p-4 cursor-pointer' onClick={() => navigate('/room/1')}>
+                                <div className='flex m-2 shadow-lg w-[14rem] p-4 cursor-pointer' onClick={() => navigate('/doctors_list')}>
                                     <div className='bg-[#243e36] mt-2 p-2 w-[2rem] h-[2rem] rounded-full '><AiOutlineVideoCameraAdd className='text-white' /></div>
                                     <div>
                                         <div className='px-2  font-semibold'> Individual <br /> Counselling </div>

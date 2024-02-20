@@ -1,5 +1,6 @@
 import react, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import './Login.css';
 
@@ -10,21 +11,24 @@ export const Signuppage = () => {
     let navigate = useNavigate();
     //call for api sigup
     const Signup = async (name, email, password) => {
-        const response = await axios.post('http://127.0.0.1:5000/signup', {
-            user: JSON.stringify({ name, email, password })
-        });
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/signup', {
+                user: JSON.stringify({ name, email, password })
+            });
 
-        console.log(response);
+            if (response.status == 200) {
+               //Save And Redirect To Home
+                localStorage.setItem("email", user['email']);
+                navigate('/');
+            } else {
 
-        if (response.status == 200) {
-            //     //Save And Redirect To Home
-            localStorage.setItem("email", user['email']);
-            navigate('/');
-        } else {
+                toast.error("User alredy exist!!");
 
-            alert("Some error occurred .PLease try again !");
-
+            }
+        } catch (error) {
+            toast.error('Please tyr to check your network. Backend is not available');
         }
+        
     }
 
 
@@ -38,6 +42,7 @@ export const Signuppage = () => {
         Signup(user.name, user.email, user.password);
     }
     return (
+        <>
         <div className='outer_box'>
             <form className='login_container' onSubmit={handleSubmit}>
                 <h1>Signup</h1>
@@ -56,7 +61,8 @@ export const Signuppage = () => {
                 <button disabled={user.name.length < 1 || user.password.length < 1}>Submit</button>
             </form>
         </div>
-
+        <ToastContainer/>
+        </>
 
     );
 }

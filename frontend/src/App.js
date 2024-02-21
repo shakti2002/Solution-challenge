@@ -11,6 +11,7 @@ import MapComponent from "./components/Map/Map";
 import Shopping from "./components/Shopping/Shopping";
 import DoctorsList from "./components/Doctors/DoctorList";
 import DoctorSchedulePage from "./components/Doctors/DoctorSchedulePage";
+import Room from "./components/Doctors/Room";
 
 function App() {
   return (
@@ -18,14 +19,18 @@ function App() {
       <Router>
         <Nav />
         <Routes>
+          {/* Home */}
           <Route path="/" element={<Home />} />
 
+          {/* shopping */}
           <Route path="/shopping" element={<Shopping />} />
           <Route path="/knowaboutyou" element={<KnowAboutYou />} />
           <Route path="/chatbot" element={<Chatbot />} />
-
+           
+          {/* doctors */}
           <Route path='/doctors_list' element={<DoctorsList />} />
           <Route path='/schedule/:id' element={<DoctorSchedulePage />} />
+          <Route path='/schedule/:id/room' element={<Room />} />
 
           <Route path='/map' element={<MapComponent />} />
           <Route path="/resumeform" element={<UserDetailsForm />} />

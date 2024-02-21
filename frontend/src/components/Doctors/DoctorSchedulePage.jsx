@@ -55,12 +55,10 @@ const DoctorSchedulePage = () => {
 
             </div>
             <div className="w-[30%] ml-8">
-                <ScheduledMeetings meetings={scheduledMeetings} />
+                <ScheduledMeetings meetings={scheduledMeetings} id={id } />
             </div>
         </div>
     );
 };
-
-
 
 export default DoctorSchedulePage;

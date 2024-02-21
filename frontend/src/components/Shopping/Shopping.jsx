@@ -3,8 +3,16 @@ import Header from './Header';
 import ProductList from './ProductList';
 import ShoppingCart from './ShoppingCart';
 import { FiSearch } from 'react-icons/fi';
+import VideoCarousel from '../Crousel/Crousel';
 
 const Shopping = () => {
+    const videos = [
+        { id: 1, src: 'v.mp4' },
+        { id: 2, src: 'video2.mp4' },
+        { id: 3, src: 'video3.mp4' },
+        // Add more video objects as needed
+    ];
+
     const [cart, setCart] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -17,6 +25,7 @@ const Shopping = () => {
         { id: 6, name: 'Cat ', price: 8, image: 'cat-food.jpg' },
         // Add more products as needed
     ];
+
 
     const addToCart = (product) => {
         const existingItem = cart.find(item => item.id === product.id);
@@ -45,9 +54,12 @@ const Shopping = () => {
 
     return (
         <div className="App">
+
+
             <Header />
 
             <div className="w-full max-w-md m-auto relative mt-[4rem] sticky top-[4rem]">
+
                 <input
                     type="text"
                     placeholder="Search by name or expertise"
@@ -57,9 +69,14 @@ const Shopping = () => {
                 />
                 <FiSearch className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer transition-colors duration-300" />
             </div>
+            <div className='h-[40vh] my-[4rem]'>
+                <VideoCarousel videos={videos} />
+            </div>
+            <div className='my-[15rem]'>
+                <ProductList products={filteredProducts} onAddToCart={addToCart} />
+                <ShoppingCart cart={cart} removeFromCart={removeFromCart} />
+            </div>
 
-            <ProductList products={filteredProducts} onAddToCart={addToCart} />
-            <ShoppingCart cart={cart} removeFromCart={removeFromCart} />
         </div>
     );
 }

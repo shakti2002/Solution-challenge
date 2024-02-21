@@ -5,6 +5,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { BiMessageAdd } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 import FileUploadComponent from './KnowMore/FileUploadComponent';
+import MyChart from './Chart/MyChart';
 
 const KnowAboutYou = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const KnowAboutYou = () => {
 
     return (
         <>
-            <div className="flex h-[100vh] mt-[4rem]">
+            <div className="flex h-[100vh] ">
 
                 <div className='w-[60%] px-[4rem] py-[6rem] bg-[#fafcfc]'>
                     <h1 className='text-5xl font-bold py-4'>Know More  About You</h1>
@@ -42,6 +43,21 @@ const KnowAboutYou = () => {
 
                 </div>
 
+
+            </div>
+            <div className="flex flex-wrap mt-16 w-full px-[2rem]">
+                <div className="p-4 m-[1rem]  bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
+                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <MyChart />
+                </div>
             </div>
         </>
     )

@@ -2,6 +2,7 @@
 import Chart from 'react-apexcharts';
 
 const MyChart = () => {
+    
     const options = {
         chart: {
             type: 'line'

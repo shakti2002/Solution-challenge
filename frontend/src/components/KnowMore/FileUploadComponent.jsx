@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FaUpload } from 'react-icons/fa';
 import Popup from './Popup'; // Adjust the import path
 
+
 const FileUploadComponent = ({ onFileUpload }) => {
     const [file, setFile] = useState(null);
     const [isPopupOpen, setPopupOpen] = useState(false);
@@ -24,7 +25,7 @@ const FileUploadComponent = ({ onFileUpload }) => {
             setFile(null);
 
 
-            onFileUpload(response.data); // You can handle the response data as needed in your React component
+            onFileUpload(response.data);
         } catch (error) {
             console.error('Error uploading file:', error);
         }
@@ -60,6 +61,7 @@ const FileUploadComponent = ({ onFileUpload }) => {
                         Upload
                     </button>
                 </div>
+
             </div>
 
             {isPopupOpen && (
@@ -68,6 +70,7 @@ const FileUploadComponent = ({ onFileUpload }) => {
                     <p>Your file has been successfully uploaded.</p>
                 </Popup>
             )}
+
         </>
     );
 };

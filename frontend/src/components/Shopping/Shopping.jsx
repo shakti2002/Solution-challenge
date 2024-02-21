@@ -7,9 +7,9 @@ import VideoCarousel from '../Crousel/Crousel';
 
 const Shopping = () => {
     const videos = [
-        { id: 1, src: 'v.mp4' },
-        { id: 2, src: 'video2.mp4' },
-        { id: 3, src: 'video3.mp4' },
+        { id: 1, src: 'crousel/video1.mp4' },
+        { id: 2, src: 'crousel/video2.mp4' },
+        { id: 3, src: 'crousel/video3.mp4' },
         // Add more video objects as needed
     ];
 
@@ -53,12 +53,12 @@ const Shopping = () => {
     });
 
     return (
-        <div className="App">
+        <div className="  bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
 
 
             <Header />
 
-            <div className="w-full max-w-md m-auto relative mt-[4rem] sticky top-[4rem]">
+            <div className="w-full max-w-md m-auto relative mt-[4rem] sticky top-[4rem] z-[3]">
 
                 <input
                     type="text"

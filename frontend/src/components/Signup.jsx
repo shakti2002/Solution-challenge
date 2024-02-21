@@ -17,7 +17,7 @@ export const Signuppage = () => {
             });
 
             if (response.status == 200) {
-               //Save And Redirect To Home
+                //Save And Redirect To Home
                 localStorage.setItem("email", user['email']);
                 navigate('/');
             } else {
@@ -28,7 +28,7 @@ export const Signuppage = () => {
         } catch (error) {
             toast.error('Please tyr to check your network. Backend is not available');
         }
-        
+
     }
 
 
@@ -43,25 +43,25 @@ export const Signuppage = () => {
     }
     return (
         <>
-        <div className='outer_box'>
-            <form className='login_container' onSubmit={handleSubmit}>
-                <h1>Signup</h1>
-                <div className='login_row'>
-                    <h4 className='login_email'>Name</h4>
-                    <input type='text' name='name' onChange={handleChange} required />
-                </div>
-                <div className='login_row'>
-                    <h4 className='login_email'>Email</h4>
-                    <input type='email' name='email' onChange={handleChange} required />
-                </div>
-                <div className='login_row'>
-                    <h4>Password</h4>
-                    <input type='password' name='password' onChange={handleChange} required />
-                </div>
-                <button disabled={user.name.length < 1 || user.password.length < 1}>Submit</button>
-            </form>
-        </div>
-        <ToastContainer/>
+            <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
+                <form className='login_container' onSubmit={handleSubmit}>
+                    <h1>Signup</h1>
+                    <div className='login_row'>
+                        <h4 className='login_email'>Name</h4>
+                        <input type='text' name='name' onChange={handleChange} required />
+                    </div>
+                    <div className='login_row'>
+                        <h4 className='login_email'>Email</h4>
+                        <input type='email' name='email' onChange={handleChange} required />
+                    </div>
+                    <div className='login_row'>
+                        <h4>Password</h4>
+                        <input type='password' name='password' onChange={handleChange} required />
+                    </div>
+                    <button disabled={user.name.length < 1 || user.password.length < 1}>Submit</button>
+                </form>
+            </div>
+            <ToastContainer />
         </>
 
     );

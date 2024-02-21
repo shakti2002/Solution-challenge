@@ -38,7 +38,7 @@ const Login = () => {
     }
     return (
         <>
-            <div className='outer_box'>
+            <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500'>
                 <form className='login_container' onSubmit={handleSubmit}>
                     <h1>Login</h1>
 

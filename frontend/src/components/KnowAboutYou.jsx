@@ -9,7 +9,11 @@ import MyChart from './Chart/MyChart';
 
 const KnowAboutYou = () => {
     const navigate = useNavigate();
+    const [showChart, setShowChart] = useState(false);
 
+    const handleUploadClick = () => {
+        setShowChart(true);
+    };
 
     return (
         <>
@@ -22,7 +26,7 @@ const KnowAboutYou = () => {
                         <div className='grid py-2 px-[3rem] mt-[5rem] rounded w-[100%]'>
                             <div className=''>
                                 <div className='m-auto w-[100%] m-2  shadow-lg  p-4 cursor-pointer'>
-                                    <FileUploadComponent />
+                                    <FileUploadComponent handleUploadClick={handleUploadClick} />
                                 </div>
                                 <div className='m-auto  w-[100%] m-2  shadow-lg p-4 cursor-pointer' onClick={() => navigate('/resumeform')}>
                                     <div className='bg-[#243e36] m-auto  mt-2 p-2 w-[3rem] h-[3rem] rounded-full '><BiMessageAdd className='text-white mx-auto my-[0.5rem]' /></div>
@@ -46,18 +50,11 @@ const KnowAboutYou = () => {
 
             </div>
             <div className="flex flex-wrap mt-16 w-full px-[2rem]">
-                <div className="p-4 m-[1rem]  bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <MyChart />
-                </div>
-                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <MyChart />
-                </div>
-                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <MyChart />
-                </div>
-                <div className="p-4 m-[1rem] bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                    <MyChart />
-                </div>
+                {showChart && (
+                    <div className="p-4 m-[1rem]  bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                        <MyChart />
+                    </div>
+                )}
             </div>
         </>
     )

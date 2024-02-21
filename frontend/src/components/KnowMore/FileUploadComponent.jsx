@@ -4,7 +4,7 @@ import { FaUpload } from 'react-icons/fa';
 import Popup from './Popup'; // Adjust the import path
 
 
-const FileUploadComponent = ({ onFileUpload }) => {
+const FileUploadComponent = ({  handleUploadClick}) => {
     const [file, setFile] = useState(null);
     const [isPopupOpen, setPopupOpen] = useState(false);
 
@@ -25,14 +25,16 @@ const FileUploadComponent = ({ onFileUpload }) => {
             setFile(null);
 
 
-            onFileUpload(response.data);
+            // onFileUpload(response.data);
+            handleUploadClick();
         } catch (error) {
-            console.error('Error uploading file:', error);
+            console.log('Error uploading file:', error);
         }
     };
 
     const handleClosePopup = () => {
         setPopupOpen(false);
+        handleUploadClick();
     };
 
     return (

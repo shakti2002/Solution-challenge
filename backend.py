@@ -3,7 +3,7 @@ from ast import literal_eval
 from pymongo import MongoClient
 from flask_cors import CORS
 import json
-# import openai
+import openai
 
 # import nltk
 
@@ -22,84 +22,103 @@ client=MongoClient('mongodb+srv://dhananjaydogne:DD@cluster0.q565lol.mongodb.net
 db=client.get_database('manit')
 
 # opportunity 
-# @app.route('/opportunity', methods=['GET','POST'])
-# def add_opportunity():
+@app.route('/opportunity', methods=['GET','POST'])
+def add_opportunity():
     
-#     if request.method == 'POST':
-#         user_input = request.data
-#         user_input=literal_eval(user_input.decode('utf-8'))
-#         title = user_input['title']
-#         description = user_input['description']
-#         location=user_input['location']
-#         deadline=user_input['deadline']
+    if request.method == 'POST':
+        user_input = request.data
+        user_input=literal_eval(user_input.decode('utf-8'))
+        title = user_input['title']
+        description = user_input['description']
+        location=user_input['location']
+        deadline=user_input['deadline']
         
 
-#         # Store data in MongoDB database
-#         db.opportunity.insert_one({'title':title, 'description':description,"location":location, 'deadline':deadline})
+        # Store data in MongoDB database
+        db.opportunity.insert_one({'title':title, 'description':description,"location":location, 'deadline':deadline})
         
         
-#         return jsonify({'message': 'Data received successfully'}), 200
+        return jsonify({'message': 'Data received successfully'}), 200
     
-#     data = jsonify(list(db.opportunity.find({}, {'_id': 0})))
-#     print(data)
-#     return data, 200
+    data = jsonify(list(db.opportunity.find({}, {'_id': 0})))
+    print(data)
+    return data, 200
 
 
 #  chat bot 
+user_profile = {
+    'name': 'Shrinath',  # Example name
+    'age': 20,       # Example age
+    'Gender':'Male'
+}
+@app.route("/chat", methods=["GET", "POST"])
+def CustomChatGPT():
+    openai.api_key = "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"
 
-# @app.route("/chat", methods=["GET", "POST"])
-# def CustomChatGPT():
-#     openai.api_key = "API_KEY"
+    messages = [{"role": "system", "content": "You are a financial experts that specializes in real estate investment and negotiation"}]
 
-#     messages = [{"role": "system", "content": "You are a financial experts that specializes in real estate investment and negotiation"}]
+    user_input=request.data
+    user_input=literal_eval(user_input.decode('utf-8'))
+    user_input=user_input["user_input"]
+    if 'name' in user_input.lower():
+        if 'name' in user_profile:
+            # return ("Chatbot: My name is Chatbot.")
+            return jsonify({"response":'hi shrinath'})
+        else:
+            print("Chatbot: I'm sorry, I don't know my name yet.")
+    elif 'age' in user_input.lower():
+        if 'age' in user_profile:
+            return jsonify({"response":'your age is 20'})
+            # print(f"Chatbot: I am {user_profile['age']} years old.")
+        else:
+            print("Chatbot: I'm sorry, I don't know my age yet.")
 
-#     user_input=request.data
-#     user_input=literal_eval(user_input.decode('utf-8'))
-#     user_input=user_input["user_input"]
-#     print(request.data)
-#     messages.append({"role": "user", "content": user_input})
-#     response = openai.ChatCompletion.create(
-#         model = "gpt-3.5-turbo",
-#         messages = messages
-#     )
-#     ChatGPT_reply = response["choices"][0]["message"]["content"]
-#     messages.append({"role": "assistant", "content": ChatGPT_reply})
-#     print(ChatGPT_reply)
-#     return jsonify({"response":ChatGPT_reply})
+    elif 'past illness' in user_input.lower():
+        return jsonify({"response":'you was suffered from corona virus'})
+    print(request.data)
+    messages.append({"role": "user", "content": user_input})
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = messages
+    )
+    ChatGPT_reply = response["choices"][0]["message"]["content"]
+    messages.append({"role": "assistant", "content": ChatGPT_reply})
+    print(ChatGPT_reply)
+    return jsonify({"response":ChatGPT_reply})
     
     
 # scan resume 
 
-# @app.route('/upload_resume', methods=['POST'])
-# def upload_resume():
-#     try:
-#         # Assuming the file is sent as 'resume' in the form data
-#         uploaded_file = request.files['resume']
+@app.route('/upload_resume', methods=['POST'])
+def upload_resume():
+    try:
+        # Assuming the file is sent as 'resume' in the form data
+        uploaded_file = request.files['resume']
 
-#         if uploaded_file:
-#             # Save the file to a location (optional)
-#             uploaded_file.save('uploads/' + (uploaded_file.filename))
+        if uploaded_file:
+            # Save the file to a location (optional)
+            uploaded_file.save('uploads/' + (uploaded_file.filename))
 
-#             # Extract information from the resume
-#             resume_data = resume_parser(uploaded_file.read())
-#             return jsonify(resume_data)
+            # Extract information from the resume
+            resume_data = resume_parser(uploaded_file.read())
+            return jsonify(resume_data)
 
-#         return jsonify({'error': 'No file provided'}), 400
+        return jsonify({'error': 'No file provided'}), 400
 
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 # fill mannually 
 
-# @app.route('/submit_resume', methods=['POST'])
-# def submit_resume():
-#     try:
-#         data = request.json  # Assuming data is sent as JSON
-#         db.resume.insert_one(data)  # Insert data into MongoDB
-#         return jsonify({'message': 'Resume submitted successfully'}), 200
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
+@app.route('/submit_resume', methods=['POST'])
+def submit_resume():
+    try:
+        data = request.json  # Assuming data is sent as JSON
+        db.resume.insert_one(data)  # Insert data into MongoDB
+        return jsonify({'message': 'Resume submitted successfully'}), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 # Authenticattion 

@@ -29,8 +29,8 @@ const DoctorList = () => {
     });
 
     return (
-        <div className="px-4 py-8">
-            <div className="w-full max-w-md m-auto relative sticky top-[4rem]">
+        <div className="px-4 py-8 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            <div className="w-full max-w-md m-auto relative sticky top-[4rem] z-[3]">
                 <input
                     type="text"
                     placeholder="Search by name or expertise"

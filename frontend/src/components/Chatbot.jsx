@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { BsSendFill } from "react-icons/bs";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Chatbot = () => {
     const [userInput, setUserInput] = useState('');
@@ -14,15 +15,19 @@ const Chatbot = () => {
         const userMessage = { role: 'user', text: userInput };
         setChatHistory((prevChatHistory) => [...prevChatHistory, userMessage]);
         setUserInput('');
+        try {
+            // Send the user's message to the server (backend)
+             const response = await axios.post('http://127.0.0.1:5000/chat', {
+                 user_input: userInput,
+             });
 
-        // Send the user's message to the server (backend)
-        const response = await axios.post('http://127.0.0.1:5000/chat', {
-            user_input: userInput,
-        });
+             // Add the bot's response to the chat history
+             const botMessage = { role: 'bot', text: response.data.response };
+             setChatHistory((prevChatHistory) => [...prevChatHistory, botMessage]);
+         } catch (error) {
+             toast.error("Some error in backend ,Please check your internet" );
+         }
 
-        // Add the bot's response to the chat history
-        const botMessage = { role: 'bot', text: response.data.response };
-        setChatHistory((prevChatHistory) => [...prevChatHistory, botMessage]);
     };
 
 
@@ -48,12 +53,12 @@ const Chatbot = () => {
                         value={userInput}
                         onChange={(e) => setUserInput(e.target.value)}
                         className="w-[60%] outline-none rounded-full bg-white px-4 py-2" />
-                    <button type="submit" className="bg-white rounded-full text-center mt-2 align-center py-1 px-1  ">
+                    <button type="submit" className="bg-white rounded-full text-center absolute ml-[5rem] w-[5rem] align-center py-2 px-4  ">
                         <BsSendFill className="text-[#0c0c98] m-auto  text-2xl mt-1 " />
                     </button>
                 </form>
             </div>
-
+            <ToastContainer/>
 
         </div>
     );

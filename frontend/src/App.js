@@ -14,6 +14,8 @@ import DoctorSchedulePage from "./components/Doctors/DoctorSchedulePage";
 import Room from "./components/Doctors/Room";
 import AboutUsPage from './components/About/About';
 import ApplicationOptionsPage from './components/Application/Application';
+import DoctorSignupPage from "./components/Application/DoctorSignupPage";
+import FriendSignupPage from "./components/Application/FriendSignupPage";
 
 function App() {
   return (
@@ -27,7 +29,11 @@ function App() {
           {/* shopping */}
           <Route path="/shopping" element={<Shopping />} />
           <Route path='/about' element={<AboutUsPage />} />
-          <Route path='/application_option' element={<ApplicationOptionsPage/>}/>
+
+          {/* Application */}
+          <Route path='/application_option' element={<ApplicationOptionsPage />} />
+          <Route path="/doctor-signup" element={<DoctorSignupPage />} />
+          <Route path="/friend-signup" element={<FriendSignupPage />} />
 
           <Route path="/knowaboutyou" element={<KnowAboutYou />} />
           <Route path="/chatbot" element={<Chatbot />} />

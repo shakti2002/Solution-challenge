@@ -13,7 +13,7 @@ const VideoCarousel = ({ videos }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: autoplay, // Use state to control autoplay
-        autoplaySpeed: 5000,
+        autoplaySpeed: 6000,
         beforeChange: (currentSlide, nextSlide) => {
             // Turn off autoplay after the first slide change
             if (currentSlide === 0 && nextSlide === 1) {

@@ -58,7 +58,7 @@ const Shopping = () => {
 
             <Header />
 
-            <div className="w-full max-w-md m-auto relative mt-[4rem] sticky top-[4rem]">
+            <div className="w-full max-w-md m-auto relative mt-[4rem] sticky top-[4rem] z-[3]">
 
                 <input
                     type="text"

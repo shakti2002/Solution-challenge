@@ -11,13 +11,13 @@ const Chat = () => {
     }
     return (
         <div className="nav">
-            <Link to="/" className=' px-[4rem] font-bold text-3xl my-auto'>Solution Challange</Link>
+            <Link to="/" className=' px-[4rem] font-bold text-3xl my-auto'><img className='w-[200px]'  src='favicon.ico'/></Link>
 
             <ul className='pl-8 flex justify-between w-[35%] my-auto'>
-                {/* <li className='flex cursor-pointer'>Services <RiArrowDropDownLine className='m-auto text-3xl ' /></li> */}
+                {/* <li className='flex cursor-pointer'>Services0 <RiArrowDropDownLine className='m-auto text-3xl ' /></li> */}
                 <Link to='/shopping' className='flex cursor-pointer'>Shopping</Link>
                 <Link to='/application_option' className='flex cursor-pointer'>Application</Link>
-                <Link to='/about' className='flex cursor-pointer'>About</Link>
+                <Link to='/yoga' className='flex cursor-pointer'>Yoga</Link>
                 <li className='flex cursor-pointer'>Contact</li>
             </ul>
 

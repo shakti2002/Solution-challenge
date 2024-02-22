@@ -1,0 +1,67 @@
+/* Yoga.css */
+
+/* Styles for the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Set background color for the page */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for the image grid */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images */
+}
+
+.image-container {
+    text-align: center;
+    border: 2px solid #ccc; /* Add border for image container */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    background-color: #fff; /* Set background color for image container */
+    padding: 20px;
+    width: calc(33.33% - 40px); /* Set width for each image container (33.33% width with 40px gap) */
+    margin-bottom: 20px; /* Add margin at the bottom of each image container */
+}
+
+.image-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add border radius for rounded corners */
+    margin-bottom: 10px; /* Add margin below image */
+}
+
+.description {
+    margin-top: 10px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #45a049;
+}

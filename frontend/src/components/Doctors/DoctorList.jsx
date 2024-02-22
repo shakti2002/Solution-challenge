@@ -4,15 +4,15 @@ import { useNavigate } from 'react-router-dom';
 
 
 export const doctors = [
-    { id: 1, name: 'Dr. Rajiv Patel', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
-    { id: 2, name: 'Dr. Sanju Sam', expertise: 'Dermatologist', description: 'Dr. Sanju Sam specializes in dermatology and offers personalized treatment for skin conditions.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
-    { id: 3, name: 'Dr. Mohit Jain', expertise: 'Neurologist', description: 'Dr. Mohit Jain is a renowned neurologist known for his expertise in treating neurological disorders.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
+    { id: 1, name: 'Dr. Sanjana Sam', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg' },
+    { id: 2, name: 'Dr. Rajiv Patel', expertise: 'Dermatologist', description: 'Dr. Sanju Sam specializes in dermatology and offers personalized treatment for skin conditions.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
+    { id: 3, name: 'Dr. Mohit Jain', expertise: 'Neurologist', description: 'Dr. Mohit Jain is a renowned neurologist known for his expertise in treating neurological disorders.', image: 'https://i.pinimg.com/736x/4c/1c/9e/4c1c9edd3857a345d9c4868d7f1ce83d.jpg' },
 
-    { id: 4, name: 'Dr. Rajiv Patel', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
+    { id: 4, name: 'Dr. Anamika Jain', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://st2.depositphotos.com/5653638/11526/i/450/depositphotos_115269150-beautiful-Female-Indian-doctor-looking-at-a-digital-tablet--wearing-a-white-coat-plus-stethoscope.jpg' },
 
-    { id: 5, name: 'Dr. Rajiv Patel', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
+    { id: 5, name: 'Dr. Vaibhav Patel', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://thumbs.dreamstime.com/b/indian-doctor-mature-male-medical-standing-isolated-white-background-handsome-model-portrait-31871541.jpg' },
 
-    { id: 6, name: 'Dr. Rajiv Patel', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://dashboard.localvox.com/sites/default/files/inline_images/doctor_1.jpg' },
+    { id: 6, name: 'Dr. Prerna Rathore', expertise: 'Cardiologist', description: 'Dr. Rajiv Patel is a highly experienced cardiologist with over 15 years of practice.', image: 'https://media.istockphoto.com/id/175259684/photo/portrait-of-female-doctor.jpg?s=612x612&w=0&k=20&c=mznJKVS_NibXyVpQAwJQaZKPQPiNkNPXijahWXB9Omw=' },
 
 ];
 

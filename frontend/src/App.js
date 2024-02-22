@@ -16,6 +16,9 @@ import AboutUsPage from './components/About/About';
 import ApplicationOptionsPage from './components/Application/Application';
 import DoctorSignupPage from "./components/Application/DoctorSignupPage";
 import FriendSignupPage from "./components/Application/FriendSignupPage";
+import Yoga from "./components/Yog/Yoga";
+import Music from "./components/music/music";
+
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
           {/* shopping */}
           <Route path="/shopping" element={<Shopping />} />
           <Route path='/about' element={<AboutUsPage />} />
+          <Route path='/yoga' element={<Yoga />} />
 
           {/* Application */}
           <Route path='/application_option' element={<ApplicationOptionsPage />} />
@@ -37,11 +41,15 @@ function App() {
 
           <Route path="/knowaboutyou" element={<KnowAboutYou />} />
           <Route path="/chatbot" element={<Chatbot />} />
+
            
           {/* doctors */}
           <Route path='/doctors_list' element={<DoctorsList />} />
           <Route path='/schedule/:id' element={<DoctorSchedulePage />} />
           <Route path='/schedule/:id/room' element={<Room />} />
+
+            {/* Music */}
+            <Route path='/music' element={<Music />} />
 
           <Route path='/map' element={<MapComponent />} />
           <Route path="/resumeform" element={<UserDetailsForm />} />

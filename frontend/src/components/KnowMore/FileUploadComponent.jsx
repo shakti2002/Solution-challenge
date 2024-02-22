@@ -40,7 +40,7 @@ const FileUploadComponent = ({  handleUploadClick}) => {
     return (
         <>
             <div className='text-center '>
-                <div className='px-2 text-lg font-semibold'> Upload Resume <br /> </div>
+                <div className='px-2 text-lg font-semibold'> Upload Your Medical Report <br /> </div>
                 <div className='px-2 text-sm '>Scan</div>
             </div>
 

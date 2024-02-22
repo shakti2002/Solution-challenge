@@ -17,12 +17,12 @@ const Shopping = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const products = [
-        { id: 1, name: 'Dog ', price: 10, image: 'dog-food.jpg' },
-        { id: 2, name: 'Cat ', price: 8, image: 'cat-food.jpg' },
-        { id: 3, name: 'Dog ', price: 10, image: 'dog-food.jpg' },
-        { id: 4, name: 'Cat Food', price: 8, image: 'cat-food.jpg' },
-        { id: 5, name: 'Dog Food', price: 10, image: 'dog-food.jpg' },
-        { id: 6, name: 'Cat ', price: 8, image: 'cat-food.jpg' },
+        { id: 1, name: 'Dog ', price: 10, image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww' },
+        { id: 2, name: 'Dog ', price: 8, image: 'https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGV0c3xlbnwwfHwwfHx8MA%3D%3D' },
+        { id: 3, name: 'Cat ', price: 10, image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { id: 4, name: 'Dog', price: 8, image: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBldHN8ZW58MHx8MHx8fDA%3D' },
+        { id: 5, name: 'Parrot ', price: 10, image: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFycm90fGVufDB8fDB8fHww' },
+        { id: 6, name: 'Fish ', price: 8, image: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z29sZGZpc2h8ZW58MHx8MHx8fDA%3D' },
         // Add more products as needed
     ];
 
@@ -72,7 +72,7 @@ const Shopping = () => {
             <div className='h-[40vh] my-[4rem]'>
                 <VideoCarousel videos={videos} />
             </div>
-            <div className='my-[15rem]'>
+            <div className='mt-[15rem]'>
                 <ProductList products={filteredProducts} onAddToCart={addToCart} />
                 <ShoppingCart cart={cart} removeFromCart={removeFromCart} />
             </div>

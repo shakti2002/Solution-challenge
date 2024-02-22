@@ -53,7 +53,7 @@ user_profile = {
 }
 @app.route("/chat", methods=["GET", "POST"])
 def CustomChatGPT():
-    openai.api_key = "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"
+    openai.api_key = "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"
 
     messages = [{"role": "system", "content": "You are a financial experts that specializes in real estate investment and negotiation"}]
 

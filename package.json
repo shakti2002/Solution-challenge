@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@zegocloud/zego-uikit-prebuilt": "^1.10.2"
+    "@zegocloud/zego-uikit-prebuilt": "^1.10.2",
+    "face-api.js": "^0.22.2"
   }
 }

@@ -32,21 +32,21 @@ import Chart from 'react-apexcharts';
 const MyChart = ({ data }) => {
     const options = {
         chart: {
-            type: 'line'
+            type: 'bar'
         },
         series: [{
             name: 'Results',
-            data: [75, 68, 92, 1.1, 4.2, 7, 7, 40]
+            data: [75, 68, 92, 1.1, 4.2, 7]
         }],
         xaxis: {
-            categories: ['Alanine Aminotransferase','Aspartate Aminotransferase','Alkaline Phosphatase','Total Bilirubin','Albumin','Total Protein']
+            categories: ['Alanine','Aspartate','Alkaline Phosphatase','Total Bilirubin','Albumin','Total Protein']
         }
     };
 
     return (
         <div className='m-[1rem] bg-[#69696929] p-[2rem] rounded'>
             <h1>Your Medical Report</h1>
-            <Chart options={options} series={options.series} type="line" width={500} />
+            <Chart options={options} series={options.series} type="bar" width={750} />
         </div>
     );
 };

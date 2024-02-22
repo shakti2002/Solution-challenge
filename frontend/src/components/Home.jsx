@@ -17,7 +17,7 @@ const Home = () => {
             <div className="flex h-[100vh] ">
 
                 <div className='w-[60%] px-[4rem] py-[6rem] bg-[#fafcfc]'>
-                    <h1 className='text-5xl font-bold py-4'>Your Path to <br /> Correct Future Choice</h1>
+                    <h1 className='text-5xl font-bold py-4'>Good Health and <br /> Wellbeing Service</h1>
                     <h1 className='text-xl'>What type of service you want?</h1>
                     <div className='w-[100%]'>
                         <div className='grid p-2 rounded w-[100%]'>
@@ -61,7 +61,27 @@ const Home = () => {
                                     </div>
                                     <div className='m-auto'><FaArrowRightLong /></div>
                                 </div>
+                                
 
+
+                            </div>
+                            <div className='flex'>
+                            <a href="http://localhost:5173/" target='_blank' className='flex m-2 shadow-lg w-[14rem] p-4 cursor-pointer'>
+                            <div className='bg-[#243e36] mt-2 p-2 w-[2rem] h-[2rem] rounded-full '><AiOutlineUser className='text-white' /></div>
+                            <div>
+                                <div className='px-2 font-semibold'>Snap ME<br />  </div>
+                                <div className='px-2 text-sm'>For Myself</div>
+                            </div>
+                            <div className='m-auto'><FaArrowRightLong /></div>
+                            </a>
+                            <a href="http://localhost:3001/" target='_blank' className='flex m-2 shadow-lg w-[14rem] p-4 cursor-pointer'>
+                            <div className='bg-[#243e36] mt-2 p-2 w-[2rem] h-[2rem] rounded-full '><AiOutlineUser className='text-white' /></div>
+                            <div>
+                                <div className='px-2 font-semibold'>Music Recommendation<br />  </div>
+                                <div className='px-2 text-sm'>For Myself</div>
+                            </div>
+                            <div className='m-auto'><FaArrowRightLong /></div>
+                            </a>
                             </div>
                         </div>
                     </div>

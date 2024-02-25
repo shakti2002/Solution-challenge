@@ -13,10 +13,13 @@ The primary objective is to deliver empathetic and tailored assistance to users 
 3. SCHEULING MEETINGS: when required one can also shift to personal human interaction with  therapist with their problems.
 4. SNAP ME: uese sentiment analysis and checks your mental health with a snap of your thatyou acn drop at anytime to your respective threapist.
 5. NEAR ME: Provide the location of the thearapist and mental health care professionals for physicals meetups as and when requires.
-6. TEST ME: analysis of your mental health on the basis of personalized test with the bot. 
+6. TEST ME: analysis of your mental health on the basis of personalized test with the bot.
+7. Mood playlist: Suggest mind relaxing song.
 
-
-
+# Command Run:
+1. To start frontend: npm start
+2. To start backend: python backend.py
+   
 # Key Components:
 1. NLP Integration: The chatbot utilizes NLP to comprehend and respond effectively to user inputs, ensuring a more natural and meaningful interaction.
 
@@ -57,7 +60,7 @@ The primary objective is to deliver empathetic and tailored assistance to users 
  3. Image analysis and classification (Resnet50)
  
 # Block Diagram
-  ![diagram-export-11-5-2023-10_19_08-AM](https://github.com/shakti2002/TechGeeks/assets/109802187/886edfef-af17-4bbb-90c0-c8d6e5bfe04f)
+![archi](https://github.com/shakti2002/Solution-challenge/assets/120880974/da003fe1-7872-4063-b633-a7003545617c)
 
 # Presentation[
-https://www.canva.com/design/DAF58LMrtAE/WlyOu-Uvm_GYoFrOJz1jYg/edit)https://www.canva.com/design/DAF58LMrtAE/WlyOu-Uvm_GYoFrOJz1jYg/edit
+https://drive.google.com/file/d/1TEx7qmSOeoenBrMm30bMZBJBcuPtENnu/view?usp=sharing
